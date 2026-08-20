@@ -1,0 +1,33 @@
+.start{
+    min-height: 100vh;
+    background-image: url('/image/start/imagem_start.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.start-logo{
+    width: 25rem;
+    height: auto;
+    margin-bottom: 20px;
+    
+}
+h3{
+    font-size: 3rem;
+    color: #F1F5F9;
+    margin-bottom: 20px;
+    text-shadow:0 2px 8px #071A33,
+                0 0 1px rgba(0,170,255,0.35);
+}
+p{  
+    font-size: 25px;
+    font-weight: 400;
+    color: #F1F5F9;
+    margin-bottom: 20px;
+    text-shadow:0 2px 8px #071A33,
+                0 0 1px rgba(0,170,255,0.35);
+}
