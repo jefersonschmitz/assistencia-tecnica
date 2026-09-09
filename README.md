@@ -1,1 +1,1 @@
-ttps://jefersonschmitz.github.io/assistencia-tecnica/
+https://jefersonschmitz.github.io/assistencia-tecnica/
