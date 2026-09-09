@@ -1,18 +1,21 @@
 import './header.css'
-function Header(){
-    return(
-        
-    <nav className="Header">
-         <img id="icon"src="/image/logo/icone.png" alt="NexTek" />
-        <div className="Header-links">
-        <a href="">Inicio</a>
-        <a href="">Serviços</a>
-        <a href="">Sobre Nós</a>
-        <a href="">Contato</a>
-        <a href="">Localização</a>
+
+function Header() {
+  return (
+    <header className="site-header">
+      <nav className="header-content" aria-label="Navegação principal">
+        <a className="brand" href="#inicio" aria-label="NexTek - início">
+          <span className="brand-mark"><img src="/image/logo/icone-transparente-v2.png" alt="" /></span>
+          <span>NEX<b>TEK</b></span>
+        </a>
+        <div className="header-links">
+          <a href="#inicio">Início</a><a href="#servicos">Serviços</a>
+          <a href="#sobre">Sobre nós</a><a href="#contato">Contato</a>
         </div>
-    </nav>
-    )
+        <a className="header-cta" href="#contato">Solicitar orçamento</a>
+      </nav>
+    </header>
+  )
 }
 
 export default Header

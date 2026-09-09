@@ -1,33 +1,225 @@
-.start{
-    min-height: 100vh;
-    background-image: url('/image/start/imagem_start.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+.start {
+  position: relative;
+  display: grid;
+  min-height: 100svh;
+  place-items: center;
+  overflow: hidden;
+  padding: 132px 24px 54px;
+  background:
+    linear-gradient(90deg, rgba(3, 7, 4, 0.98), rgba(3, 7, 4, 0.65)),
+    url('/image/start/imagem_start.jpg') center / cover no-repeat;
 }
-.start-logo{
-    width: 25rem;
-    height: auto;
-    margin-bottom: 20px;
-    
+
+.start::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: 0.13;
+  background-image:
+    linear-gradient(rgba(57, 255, 136, 0.14) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(57, 255, 136, 0.14) 1px, transparent 1px);
+  background-size: 52px 52px;
 }
-h3{
-    font-size: 3rem;
-    color: #F1F5F9;
-    margin-bottom: 20px;
-    text-shadow:0 2px 8px #071A33,
-                0 0 1px rgba(0,170,255,0.35);
+
+.start-glow {
+  position: absolute;
+  right: -180px;
+  bottom: -240px;
+  width: 540px;
+  height: 540px;
+  border-radius: 50%;
+  background: rgba(25, 255, 112, 0.12);
+  filter: blur(90px);
 }
-p{  
-    font-size: 25px;
-    font-weight: 400;
-    color: #F1F5F9;
-    margin-bottom: 20px;
-    text-shadow:0 2px 8px #071A33,
-                0 0 1px rgba(0,170,255,0.35);
+
+.start-content {
+  position: relative;
+  z-index: 1;
+  width: min(1180px, 100%);
+}
+
+.start-brand {
+  display: flex;
+  width: fit-content;
+  margin: 25px 0 24px;
+  align-items: center;
+  gap: clamp(14px, 2vw, 24px);
+}
+
+.start-brand > img {
+  width: clamp(78px, 9vw, 116px);
+  height: clamp(78px, 9vw, 116px);
+  object-fit: contain;
+}
+
+.start-wordmark {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.start-wordmark strong {
+  color: #f4fff8;
+  font-size: clamp(2.1rem, 4.2vw, 4.25rem);
+  line-height: 0.88;
+  letter-spacing: -0.055em;
+}
+
+.start-wordmark strong span {
+  color: #39ff88;
+}
+
+.start-wordmark small {
+  margin-top: 11px;
+  color: #a8b8ad;
+  font-size: clamp(0.62rem, 1vw, 0.82rem);
+  font-weight: 700;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: #a8b8ad;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.eyebrow i {
+  width: 28px;
+  height: 1px;
+  background: #39ff88;
+}
+
+.start h1 {
+  max-width: 760px;
+  margin: 0;
+  color: #f4fff8;
+  font-size: clamp(3.1rem, 7vw, 6.8rem);
+  line-height: 0.94;
+  letter-spacing: -0.055em;
+}
+
+.start h1 span {
+  color: #39ff88;
+}
+
+.start p {
+  max-width: 650px;
+  margin: 28px 0 0;
+  color: #a8b8ad;
+  font-size: clamp(1rem, 1.7vw, 1.18rem);
+  line-height: 1.75;
+}
+
+.start-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 34px;
+}
+
+.button {
+  display: inline-flex;
+  min-height: 52px;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  padding: 0 23px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 750;
+  transition: transform 180ms ease;
+}
+
+.button:hover {
+  transform: translateY(-2px);
+}
+
+.button-primary {
+  color: #061109;
+  background: #39ff88;
+}
+
+.button-secondary {
+  border: 1px solid #29322c;
+  color: #dce8df;
+  background: rgba(11, 16, 12, 0.6);
+}
+
+.trust-row {
+  display: flex;
+  gap: clamp(28px, 5vw, 72px);
+  margin-top: clamp(54px, 9vh, 94px);
+  padding-top: 25px;
+  border-top: 1px solid rgba(207, 255, 224, 0.12);
+}
+
+.trust-row div {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.trust-row strong {
+  color: #effff4;
+  font-size: 0.86rem;
+}
+
+.trust-row span {
+  color: #718078;
+  font-size: 0.78rem;
+}
+
+.scroll-cue {
+  position: absolute;
+  right: 28px;
+  bottom: 32px;
+  width: 1px;
+  height: 72px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.14);
+}
+
+.scroll-cue span {
+  display: block;
+  width: 1px;
+  height: 25px;
+  background: #39ff88;
+  animation: scroll 2s infinite ease-in-out;
+}
+
+@keyframes scroll {
+  from {
+    transform: translateY(-28px);
+  }
+
+  to {
+    transform: translateY(75px);
+  }
+}
+
+@media (max-width: 640px) {
+  .start {
+    padding: 120px 20px 36px;
+  }
+
+  .start-brand > img {
+    width: 72px;
+    height: 72px;
+  }
+
+  .trust-row {
+    justify-content: space-between;
+  }
+
+  .trust-row span,
+  .scroll-cue {
+    display: none;
+  }
 }
