@@ -5,7 +5,7 @@ function Header() {
     <header className="site-header">
       <nav className="header-content" aria-label="Navegação principal">
         <a className="brand" href="#inicio" aria-label="NexTek - início">
-          <span className="brand-mark"><img src="/image/logo/icone-transparente-v2.png" alt="" /></span>
+          <span className="brand-mark"><img src={`${import.meta.env.BASE_URL}image/logo/icone-transparente-v2.png`} alt="" /></span>
           <span>NEX<b>TEK</b></span>
         </a>
         <div className="header-links">

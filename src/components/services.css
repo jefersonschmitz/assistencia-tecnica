@@ -1,0 +1,181 @@
+.services {
+  position: relative;
+  padding: clamp(64px, 9vw, 120px) 24px;
+  scroll-margin-top: 92px;
+  background:
+    linear-gradient(to bottom, #050706, rgba(5, 7, 6, 0) 180px),
+    radial-gradient(ellipse at 0% 45%, rgba(57, 255, 136, 0.055), transparent 55%),
+    radial-gradient(ellipse at 100% 85%, rgba(57, 255, 136, 0.04), transparent 50%);
+}
+
+.services-content {
+  width: min(1180px, 100%);
+  margin: auto;
+}
+
+.services-heading {
+  max-width: 720px;
+  margin-bottom: 42px;
+}
+
+.services-heading h2 {
+  margin: 20px 0;
+  font-size: clamp(2rem, 4.4vw, 3.65rem);
+  line-height: 1.08;
+  letter-spacing: -0.045em;
+}
+
+.services-heading h2 span {
+  color: #39ff88;
+}
+
+.services-heading > p {
+  max-width: 580px;
+  margin: 0;
+  color: #a8b8ad;
+  line-height: 1.75;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.service-card {
+  padding: clamp(22px, 3vw, 36px);
+  border: 1px solid rgba(57, 255, 136, 0.2);
+  border-radius: 18px;
+  background: rgba(13, 24, 17, 0.42);
+  backdrop-filter: blur(12px);
+  transition: border-color 180ms ease, box-shadow 180ms ease;
+}
+
+.service-card:hover {
+  border-color: rgba(57, 255, 136, 0.45);
+  box-shadow: 0 0 32px rgba(57, 255, 136, 0.045);
+}
+
+.service-card-heading {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding-bottom: 26px;
+  border-bottom: 1px solid rgba(57, 255, 136, 0.12);
+}
+
+.service-device-icon {
+  display: grid;
+  flex-shrink: 0;
+  width: 54px;
+  height: 54px;
+  place-items: center;
+  color: #39ff88;
+  border: 1px solid rgba(57, 255, 136, 0.25);
+  border-radius: 12px;
+  background: rgba(57, 255, 136, 0.06);
+}
+
+.service-device-icon svg {
+  width: 30px;
+  height: 30px;
+}
+
+.service-card h3,
+.services-contact h3 {
+  margin: 0;
+  font-size: 1.25rem;
+  letter-spacing: -0.025em;
+}
+
+.service-card p,
+.services-contact p {
+  margin: 7px 0 0;
+  color: #a8b8ad;
+  font-size: 0.88rem;
+  line-height: 1.65;
+}
+
+.service-list {
+  display: grid;
+  gap: 24px;
+  margin: 28px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.service-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 13px;
+}
+
+.service-check {
+  color: #39ff88;
+  line-height: 1.5;
+}
+
+.service-list h4 {
+  margin: 0;
+  font-size: 0.98rem;
+  line-height: 1.5;
+  font-weight: 650;
+}
+
+.service-list p {
+  margin-top: 4px;
+}
+
+.services-contact {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  margin-top: 32px;
+  padding: 28px 0 0;
+  border-top: 1px solid rgba(57, 255, 136, 0.12);
+}
+
+.services-contact .button {
+  flex-shrink: 0;
+  border-color: rgba(57, 255, 136, 0.35);
+  color: #39ff88;
+}
+
+.services-contact .button:hover {
+  background: rgba(57, 255, 136, 0.08);
+}
+
+.services-contact .button:focus-visible {
+  outline: 2px solid #39ff88;
+  outline-offset: 4px;
+}
+
+@media (max-width: 760px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .services-contact {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 480px) {
+  .services {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+
+  .service-card-heading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .service-card {
+    transition: none;
+  }
+}

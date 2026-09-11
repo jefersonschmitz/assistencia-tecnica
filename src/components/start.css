@@ -32,6 +32,22 @@
   filter: blur(90px);
 }
 
+.start::after {
+  content: "";
+  position: absolute;
+  inset: auto 0 0;
+  height: clamp(180px, 35vh, 380px);
+  pointer-events: none;
+  background: linear-gradient(
+    to bottom,
+    rgba(5, 7, 6, 0) 0%,
+    rgba(5, 7, 6, 0.2) 25%,
+    rgba(5, 7, 6, 0.55) 55%,
+    rgba(5, 7, 6, 0.88) 80%,
+    #050706 100%
+  );
+}
+
 .start-content {
   position: relative;
   z-index: 1;
@@ -178,6 +194,7 @@
 
 .scroll-cue {
   position: absolute;
+  z-index: 1;
   right: 28px;
   bottom: 32px;
   width: 1px;
