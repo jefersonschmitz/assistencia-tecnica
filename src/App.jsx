@@ -3,6 +3,7 @@ import Header from './components/header'
 import Start from './components/start'
 import Services from './components/services'
 import About from './components/about'
+import Contact from './components/contact'
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
         <Start />
         <Services />
         <About />
+        <Contact />
       </main>
     </>
   )
